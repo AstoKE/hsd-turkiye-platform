@@ -1,0 +1,26 @@
+{
+  "name": "hsd-turkiye-platform",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "db:generate": "pnpm --dir prisma exec prisma generate",
+    "db:migrate": "pnpm --dir prisma exec prisma migrate dev",
+    "db:deploy": "pnpm --dir prisma exec prisma migrate deploy",
+    "db:seed": "pnpm --dir prisma exec tsx seed.ts"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "turbo": "^2.8.20"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.2",
+    "dotenv": "^17.3.1"
+  }
+}
